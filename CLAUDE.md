@@ -15,15 +15,28 @@ On Windows: `start "" "shooter/index.html"` from the repo root.
 
 ## Git Workflow
 
-All changes should be committed and pushed to GitHub after completion:
+**Commit and push after every meaningful unit of work** — do not batch multiple features into one commit or wait until a task is fully complete. This ensures work is never lost and the history stays easy to revert.
+
+Good commit cadence examples:
+- After adding a new feature or enemy type
+- After fixing a bug
+- After any refactor, even small ones
+- After updating config or data (e.g. level definitions)
 
 ```bash
-git add <files>
-git commit -m "descriptive message"
+git add <specific files>
+git commit -m "short imperative summary
+
+Optional longer explanation if needed."
 git push
 ```
 
 Remote: `https://github.com/williambuchanan2/ClaudeTraining` (branch: `master`)
+
+Commit message rules:
+- First line: imperative mood, ≤72 chars (e.g. `Add shield power-up to level 3`)
+- No vague messages like "update", "fix stuff", or "WIP"
+- Each commit should represent one logical change that could be reverted independently
 
 ---
 
